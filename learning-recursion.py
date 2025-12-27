@@ -146,7 +146,7 @@ def swaparr2(l):
     swaparr2(l+1)
 
 def pallin_string(i,a):
-    if i>=len(a):
+    if i>=len(a)//2:
         return True
     if a[i]!=a[len(a) - i - 1] :
         return False
