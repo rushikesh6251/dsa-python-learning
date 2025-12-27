@@ -1,5 +1,5 @@
-count = 0
-sum=0
+# count = 0
+# sum=0
 def f():
     # this shows infinite recursion
     print("1")
@@ -30,7 +30,7 @@ def prnum(i,n):
 def psum(i,n):
     global sum
     if i > n:
-        print("the sum of N numbers is: ", sum)
+        print("the sum of",n,"numbers is: ", sum)
         return
     sum = sum + i
     psum(i + 1, n)
@@ -44,6 +44,14 @@ def btprnum(i,n):
         return
     btprnum(i+1,n)
     print(i)
+def sumaw(n):
+    if n==0:
+        return 0
+    return n+ sumaw(n-1)
+def fact(n):
+    if n==0:
+        return 1
+    return n* fact(n-1)
 if __name__=="__main__":
     n=int(input("enter any integer: "))
-    btprnum(1,n)
+    print(sumaw(n))
