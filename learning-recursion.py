@@ -151,6 +151,11 @@ def pallin_string(i,a):
     if a[i]!=a[len(a) - i - 1] :
         return False
     return pallin_string(i+1,a)
+def fibo(n):
+    if n<=1:
+        return n
+    return fibo(n-1)+fibo(n-2)
+
 if __name__=="__main__":
-    a="MADAM"
-    print(pallin_string(0,a))
+    n=int(input("enter any integer"))
+    print(fibo(n))
