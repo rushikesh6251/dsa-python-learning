@@ -48,7 +48,7 @@ def merge(a,low,mid,high):
     while left<=mid:
         temp.append(a[left])
         left += 1
-    while right<=mid:
+    while right<=high:
         temp.append(a[right])
         right += 1
     for i in range(low,high+1):
@@ -60,3 +60,4 @@ if __name__=="__main__":
     for i in range(n):
         a.append(int(input("enter array element: ")))
     ms(a,0,len(a)-1)
+    print(a)
